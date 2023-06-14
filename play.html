@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Page</title>
+    <link rel="shortcut icon" href="./img/unblocked-infinite-website-favicon-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+</head>
+<body>
+    <div class="progress">
+        <div class="progress-bar" id="scroll-bar">
+
+        </div>
+    </div>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">Unblocked<span>Infinite</span></a>
+            <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
+                <a href="./index.html"class="thide"><i class='bx bx-home'></i></a>
+                <a href="./games.html"><i class='bx bx-play'></i></a>
+                <a href="./chats.html" class="thide"><i class='bx bx-message'></i></a>
+                <a href="./careers.html" class="thide"><i class='bx bx-briefcase'></i></a>
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/" alt="">
+                <div class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="chats.html">Chat</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </div>
+            </div>
+            <div class="notification">
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle' ></i>
+                    <p>New Jobs Posted. Check Them Out.</p>
+                </div>
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle' ></i>
+                    <p>Thanks For Checking Out This Site</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="video-container container">
+        <iframe src="" frameborder="0" id="iframe"></iframe>
+    </div>
+
+    <div class="about container">
+        <h2>About Game</h2>
+        <p id="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A deserunt impedit dolorum vel velit ut totam molestias delectus ex aspernatur? Architecto nulla perspiciatis natus voluptatem nostrum recusandae incidunt ea? Tempora. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quam quas quidem reprehenderit laborum pariatur recusandae incidunt laboriosam? Mollitia odio dicta cupiditate perspiciatis sint quod accusamus rem velit ut fugiat.</p>
+    </div>
+
+    <div class="screenshots container">
+        <h2>ScreenShots</h2>
+        <div class="screenshots-content">
+            <img src="./img/screenshot1.png" alt="" id="img1">
+            <img src="./img/screenshot2.jpg" alt="" id="img2">
+            <img src="./img/screenshot3.png" alt="" id="img3">
+        </div>
+    </div>
+
+    
+
+    <div class="copyright container">
+        <a href="#" class="logo">Unblocked<span>Infinite</span></a>
+        <p>&#169; Unblocked Infinite All Rights Reserved</p>
+    </div>
+
+
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getip"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cluster Rush</title>
+    <link rel="icon" href="./icon.jpg">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      body .ctr {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ctr canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ctr">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="100%" width="100%"></canvas>
+    </div>
+  
+    <script type="text/javascript">
+      var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null, // arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        backgroundColor: "#222C36",
+        splashStyle: "Dark",
+        dataUrl: "Release/NG.data",
+        codeUrl: "Release/NG.js",
+        asmUrl: "Release/NG.asm.js",
+        memUrl: "Release/NG.mem",
+      };
+      console.log("If the file NG.mem returns a 404 error, that is ok!")
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

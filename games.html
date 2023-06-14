@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Infinite</title>
+    <link rel="shortcut icon" href="./img/unblocked-infinite-website-favicon-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+</head>
+<body>
+    <div class="progress">
+        <div class="progress-bar" id="scroll-bar">
+
+        </div>
+    </div>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">Unblocked<span>Infinite</span></a>
+            <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
+                <a href="./index.html"class="thide"><i class='bx bx-home'></i></a>
+                <a href="./games.html"><i class='bx bx-play'></i></a>
+                <a href="./chats.html" class="thide"><i class='bx bx-message'></i></a>
+                <a href="./careers.html" class="thide"><i class='bx bx-briefcase'></i></a>
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/" alt="">
+                <div class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="chats.html">Chat</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </div>
+            </div>
+            <div class="notification">
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle' ></i>
+                    <p>New Jobs Posted. Check Them Out.</p>
+                </div>
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle' ></i>
+                    <p>Thanks For Checking Out This Site</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="new container" id="pad">
+        <div class="new-content">
+            <div class="box">
+                <img src="./img/trending1.jpg" alt="">
+                <div class="box-text">
+                    <h2>Cluster Trucks</h2>
+                    <h3>Action</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.1</span>
+                        </div>
+                        <a href="./play.html?gameInfo=cluster-rush" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/backroom.jpg" alt="">
+                <div class="box-text">
+                    <h2>BackRooms</h2>
+                    <h3>Survival</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.8</span>
+                        </div>
+                        <a href="./play.html?gameInfo=backroom" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/trending3.jpg" alt="">
+                <div class="box-text">
+                    <h2>VEX 7</h2>
+                    <h3>Platformer</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.5</span>
+                        </div>
+                        <a href="./play.html?gameInfo=vex7" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/trending4.jpg" alt="">
+                <div class="box-text">
+                    <h2>Subway Surfers</h2>
+                    <h3>Runner</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.0</span>
+                        </div>
+                        <a href="./play.html?gameInfo=subway" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/trending5.avif" alt="">
+                <div class="box-text">
+                    <h2>Moto X3M</h2>
+                    <h3>Racing</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.6</span>
+                        </div>
+                        <a href="./play.html?gameInfo=motox3mp" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new1.jpg" alt="">
+                <div class="box-text">
+                    <h2>Bloons TD 4</h2>
+                    <h3>Tower Defence</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.4</span>
+                        </div>
+                        <a href="./play.html?gameInfo=bloons4" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new2.jpg" alt="">
+                <div class="box-text">
+                    <h2>Temple Run 2</h2>
+                    <h3>Runner</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>2.9</span>
+                        </div>
+                        <a href="./play.html?gameInfo=templerun2" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new3.jpg" alt="">
+                <div class="box-text">
+                    <h2>Pokemon FireRed</h2>
+                    <h3>RPG</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.1</span>
+                        </div>
+                        <a href="/play.html?gameInfo=pokemon" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/vex5.jpg" alt="">
+                <div class="box-text">
+                    <h2>Vex 5</h2>
+                    <h3>Platform</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.5</span>
+                        </div>
+                        <a href="./play.html?gameInfo=vex5" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new4.jpg" alt="">
+                <div class="box-text">
+                    <h2>Super Mario 64</h2>
+                    <h3>Platformer</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>5.0</span>
+                        </div>
+                        <a href="./play.html?gameInfo=mario" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new5.jpg" alt="">
+                <div class="box-text">
+                    <h2>Geometry Dash</h2>
+                    <h3>Rythm</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>3.8</span>
+                        </div>
+                        <a href="./play.html?gameInfo=geometrydash" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new6.png" alt="">
+                <div class="box-text">
+                    <h2>Tunnel Rush</h2>
+                    <h3>Runner</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.5</span>
+                        </div>
+                        <a href="./play.html?gameInfo=tunnelrush" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/sh.jpg" alt="">
+                <div class="box-text">
+                    <h2>Super Hot</h2>
+                    <h3>Shooter</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.9</span>
+                        </div>
+                        <a href="./play.html?gameInfo=superhot" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/hardgame.jpg" alt="">
+                <div class="box-text">
+                    <h2>Hardest Game</h2>
+                    <h3>Platform</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>3.1</span>
+                        </div>
+                        <a href="./play.html?gameInfo=hardestgame" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new7.jpg" alt="">
+                <div class="box-text">
+                    <h2>Bitlife</h2>
+                    <h3>Simulator</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.3</span>
+                        </div>
+                        <a href="./play.html?gameInfo=bitlife" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new8.avif" alt="">
+                <div class="box-text">
+                    <h2>Retro Bowl</h2>
+                    <h3>Sports</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.7</span>
+                        </div>
+                        <a href="./play.html?gameInfo=retrobowl" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/new9.jpg" alt="">
+                <div class="box-text">
+                    <h2>CSGO Clicker</h2>
+                    <h3>Clicker</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.2</span>
+                        </div>
+                        <a href="./play.html?gameInfo=csgo" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="./img/hardgame.jpg" alt="">
+                <div class="box-text">
+                    <h2>Hardest Game 2</h2>
+                    <h3>Platform</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>3.9</span>
+                        </div>
+                        <a href="./play.html?gameInfo=hardestgame2" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/vex3.jpg" alt="">
+                <div class="box-text">
+                    <h2>Vex 3</h2>
+                    <h3>Platform</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>2.7</span>
+                        </div>
+                        <a href="./play.html?gameInfo=vex3" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/vex4.jpg" alt="">
+                <div class="box-text">
+                    <h2>Vex 4</h2>
+                    <h3>Platform</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.1</span>
+                        </div>
+                        <a href="./play.html?gameInfo=vex4" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/msc.jpg" alt="">
+                <div class="box-text">
+                    <h2>Stunt Cars 2</h2>
+                    <h3>Driving</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.7</span>
+                        </div>
+                        <a href="./play.html?gameInfo=stc" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/eatio.jpg" alt="">
+                <div class="box-text">
+                    <h2>Eat.IO</h2>
+                    <h3>Online</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.2</span>
+                        </div>
+                        <a href="./play.html?gameInfo=eatio" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/drivemad.jpg" alt="">
+                <div class="box-text">
+                    <h2>Drive Mad</h2>
+                    <h3>Driving</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.2</span>
+                        </div>
+                        <a href="./play.html?gameInfo=drivemad" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/cookie.jpg" alt="">
+                <div class="box-text">
+                    <h2>Cookie Clicker</h2>
+                    <h3>Clicker</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.9</span>
+                        </div>
+                        <a href="./play.html?gameInfo=cookie" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/amongus.jpg" alt="">
+                <div class="box-text">
+                    <h2>Among Us</h2>
+                    <h3>Stratigy</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>3.1</span>
+                        </div>
+                        <a href="./play.html?gameInfo=amoungus" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/slope.png" alt="">
+                <div class="box-text">
+                    <h2>Slope</h2>
+                    <h3>Runner</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>3.8</span>
+                        </div>
+                        <a href="./play.html?gameInfo=slope" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/slope2.png" alt="">
+                <div class="box-text">
+                    <h2>Slope 2</h2>
+                    <h3>Runner</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.6</span>
+                        </div>
+                        <a href="./play.html?gameInfo=slope2" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/10mtd.png" alt="">
+                <div class="box-text">
+                    <h2>10 Minutes Till</h2>
+                    <h3>Shooter</h3>
+                    <div class="rating-download">
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <span>4.1</span>
+                        </div>
+                        <a href="./play.html?gameInfo=10mtd" class="box-btn"><i class='bx bx-play' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+    <div class="copyright container">
+        <a href="#" class="logo">Unblocked<span>Infinite</span></a>
+        <p>&#169; Unblocked Infinite All Rights Reserved</p>
+    </div>
+
+
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getip"></script>
+</body>
+</html>
