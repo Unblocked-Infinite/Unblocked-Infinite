@@ -163,6 +163,26 @@ function createInfoPopup() {
 createInfoPopup()
 
 
+// Function to handle the resize event
+function handleResize() {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (screenWidth < 728) {
+    document.getElementById("ad1").style.width = screenWidth.toString();
+  } else {
+    var adElement = document.getElementById(screenWidth.toString());
+    if (adElement) {
+      adElement.id = "ad1";
+    }
+  }
+}
+
+// Add event listener for the resize event
+window.addEventListener("resize", handleResize);
+
+// Initial check on page load
+handleResize();
+
 
 
 
