@@ -201,7 +201,7 @@ function toggleFullscreen(event) {
     } else if (element.msRequestFullscreen) { // IE/Edge
       element.msRequestFullscreen();
     }
-    document.getElementById("fsicon").innerHTML = "<box-icon name='exit-fullscreen'></box-icon>";
+    document.getElementById("fsicon").innerHTML = "<i class='bx bx-exit-fullscreen' ></i>";
   } else {
     // Exit fullscreen
     if (document.exitFullscreen) {
@@ -213,7 +213,7 @@ function toggleFullscreen(event) {
     } else if (document.msExitFullscreen) { // IE/Edge
       document.msExitFullscreen();
     }
-    document.getElementById("fsicon").innerHTML = "<box-icon name='fullscreen'></box-icon>";
+    document.getElementById("fsicon").innerHTML = "<i class='bx bx-fullscreen' ></i>";
   }
 }
 
