@@ -18,6 +18,39 @@
       gtag('js', new Date());
 
       gtag('config', 'G-ZERK8P15RY');
+      function toggleFullscreen() {
+  const element = document.documentElement;
+
+  if (!document.fullscreenElement && !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement && !document.msFullscreenElement) {
+    // Enter fullscreen
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // IE/Edge
+      element.msRequestFullscreen();
+    }
+    document.getElementById("fsicon").innerHTML = "<box-icon name='exit-fullscreen'></box-icon>";
+  } else {
+    // Exit fullscreen
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { // Firefox
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { // IE/Edge
+      document.msExitFullscreen();
+    }
+    document.getElementById("fsicon").innerHTML = "<box-icon name='fullscreen'></box-icon>";
+  }
+}
+
+document.getElementById("fsicon").addEventListener("click", toggleFullscreen);
+
     </script>
 </head>
 <body>
@@ -33,7 +66,7 @@
                 <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
                 <a href="./index.html"class="thide"><i class='bx bx-home'></i></a>
                 <a href="./games.html"><i class='bx bx-play'></i></a>
-                <a href="" onclick="fs" id="fsicon" class="thide"><box-icon name='fullscreen'></box-icon></a>
+                <a href="" onclick="fs" id="fsicon" class="thide"><i class='bx bx-fullscreen' ></i></a>
                 <a href="./careers.html" class="thide"><i class='bx bx-briefcase'></i></a>
                 <div class="menu-icon">
                     <div class="line1"></div>
