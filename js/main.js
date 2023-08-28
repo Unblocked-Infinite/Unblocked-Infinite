@@ -185,7 +185,8 @@ handleResize();
 
 
 
-function toggleFullscreen() {
+function toggleFullscreen(event) {
+  event.preventDefault();
   const element = document.documentElement;
 
   if (!document.fullscreenElement && !document.mozFullScreenElement &&
