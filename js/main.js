@@ -1,20 +1,5 @@
 let menu = document.querySelector(".menu-icon");
 let navbar = document.querySelector(".menu");
-function showAlert() {
-  // Check if there's a previous alert timestamp stored in local storage
-  const lastAlertTimestamp = localStorage.getItem('lastAlertTimestamp');
-
-  // If there's no previous timestamp or it has been more than 4 hours, show the alert
-  if (!lastAlertTimestamp || (Date.now() - parseInt(lastAlertTimestamp, 10)) >= 4 * 60 * 60 * 1000) {
-    alert('Try To Find Me, And Fuck Off Tech Team. This Is My Site!');
-
-    // Store the current timestamp in local storage as the last alert time
-    localStorage.setItem('lastAlertTimestamp', Date.now().toString());
-  }
-}
-
-// Call the showAlert function initially
-showAlert();
 
 menu.onclick = () => {
     navbar.classList.toggle('active');
