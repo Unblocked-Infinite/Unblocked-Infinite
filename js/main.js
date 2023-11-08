@@ -219,55 +219,6 @@ function toggleFullscreen(event) {
 
 document.getElementById("fsicon").addEventListener("click", toggleFullscreen);
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Remove all HTML elements from the body
-    document.body.innerHTML = '';
-
-    // Create a style element for the required CSS
-    const style = document.createElement('style');
-    style.innerHTML = `
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-
-      #overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #message {
-        text-align: center;
-        color: white;
-        font-weight: bold;
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Create overlay and message
-    const overlay = document.createElement('div');
-    overlay.id = 'overlay';
-    const message = document.createElement('div');
-    message.id = 'message';
-    overlay.appendChild(message);
-
-    // Customize the message content as needed
-    message.innerHTML = `
-      <h1><b>Our Site Has Lost Funding And We Need Donations.</b></h1>
-      <h3>If you want our site to stay up, please consider donating. Even $1 helps!</h3>
-      <h3>Cash App Username: $MattyLutz</h3>
-    `;
-
-    document.body.appendChild(overlay);
-  });
 
 
 
